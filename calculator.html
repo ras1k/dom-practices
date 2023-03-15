@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>This is My Calculator</h1>
+    <input type="number" name="" id="num-input">
+    <button id="apply-btn">Apply</button>
+    <p>Please pay <span id="payment"></span> </p>
+</body>
+
+<script>
+    document.getElementById('apply-btn').addEventListener('click', function(){
+        const numberInput = document.getElementById('num-input');
+        const num = parseFloat(numberInput.value);
+        console.log(num);
+        const newNum = (30 / 100) * num ;
+        numberInput.value = '';
+        // console.log(newNum);
+
+        const aa = document.getElementById('payment');
+        aa.innerText = newNum;
+    })
+</script>
+</html>
